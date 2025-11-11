@@ -1,16 +1,62 @@
 ---
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
 
+import '@fontsource-variable/quicksand';
+
+const background_color = "rgb(249, 239, 219)";
+const accent_color = "#9dbc98";
+const text_color = "#000000";
+const text_accent_color = "#638889";
 ---
+
+<style define:vars={{ background_color, accent_color, text_color, text_accent_color }} is:global >
+	body {
+		background-color: var(--background_color);
+		margin: 0;
+	}
+
+	h1,h2,p,span {
+		font-family: 'Quicksand Variable', sans-serif;
+	}
+
+	h1 {
+		font-size: 36px;
+	}
+
+	h2 {
+		font-size: 27px;
+	}
+
+	p {
+		font-size: 18px;
+	}
+</style>
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/xml+svg" href="/logo.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Cornee Nieuwenhuis</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Navbar/>
+		<section id="Hero">
+			<Hero/>
+		</section>
+		<section id="About">
+			<About/>
+		</section>
+		<section id="Experience">
+			<Experience/>
+		</section>
+		<section id="Projects">
+			<Projects/>
+		</section>
 	</body>
 </html>

@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import headshot from "../assets/me.png"
+import github from "../assets/github.svg"
+import linkedin from "../assets/linkedin.svg"
+import mail from "../assets/at-sign.svg"
+import file from "../assets/file.svg"
+---
+
+<style>
+    .center {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .container {
+        height: 470px;
+        min-width: 1200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .info {
+        padding: 75px 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+
+    .name {
+        font-size: 48px;
+        color: var(--text_accent_color);
+    }
+    
+    .list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .list>a {
+        padding-left: 10px;
+        margin-right: 60px;
+        text-decoration: none;
+    }
+    .list>a:before {
+        position: relative;
+        left: -15px;
+        content: "•";
+        font-size: 50px;
+        color: var(--accent_color);
+    }
+
+    .me {
+        height: 470px;
+        width: 410px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 10px solid var(--accent_color);
+        border-radius: 15px;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    h1,h2 {
+        margin: 0;
+    }
+
+    /* Fold at 1250 for tablets/phones*/
+</style>
+
+<div class="center">
+    <div class="container">
+        <div class="info">
+            <div>
+                <h1>Hi, there I'm <span class="name">Cornee Nieuwenhuis</span></h1>
+                <h2>And i love working on ambitous codebases</h2>
+            </div>
+            <p>I have 4 years of experience with C++ and specialize in dev tools,<br>Also like to dable with rendering and embedded programming in Zig</p>
+            <div class="list">
+                <a href="https://www.instagram.com/kiwickstudios" target="_blank"><Image src={github} alt="Github logo" loading={"eager"} height={40} width={40}/></a>
+                <a href="https://www.instagram.com/kiwickstudios" target="_blank"><Image src={linkedin} alt="Github logo" loading={"eager"} height={40} width={40}/></a>
+                <a href="https://www.instagram.com/kiwickstudios" target="_blank"><Image src={mail} alt="Github logo" loading={"eager"} height={40} width={40}/></a>
+                <a href="https://www.instagram.com/kiwickstudios" target="_blank"><Image src={file} alt="Github logo" loading={"eager"} height={40} width={40}/></a>
+            </div>
+        </div>
+        <Image class="me" src={headshot} alt="Headshot of me" loading={"eager"}/>
+    </div>
+</div>
