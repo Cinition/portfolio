@@ -11,8 +11,24 @@
         align-items: center;
     }
 
+    img:hover {
+        cursor: pointer;
+    }
+
 </style>
 
+<script>
+    const logo = document.getElementById("logo")
+
+    logo?.addEventListener('click', () => {
+        scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+        })
+    });
+</script>
+
 <div>
-    <img src="/logo.svg" width="125" height="125" alt="Personal logo showing my initals: C N"/>
+    <img id="logo":  src="/logo.svg" width="125" height="125" alt="Personal logo showing my initals: C N"/>
 </div>
