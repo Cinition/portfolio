@@ -1,11 +1,63 @@
 ---
-
+import Job from "./Job.astro";
 ---
 
 <style>
+    section {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 150px;
+    }
 
+    .container {
+        width: 800px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .right {
+        width: 600px;
+    }
 </style>
 
-<div>
-    
-</div>
+<section>
+    <div class="container">
+        <h3>
+            Experience
+        </h3>
+        <div class="right">
+            <Job company="Tenstar Simulations" date="Jan 2024 - Present" title="Game Programmer">
+                <p>
+                    Currently I’m a Programmer at Tenstar Simulation, specialzing in Tools and Embedded, with content development on the side.
+                    I contribute mostly to the up keep of our various tools and the firmware that keeps the steering wheels from flying off.
+                    Also get to dabble with Lua on the content side.
+                </p>
+            </Job>
+            <Job company="Tension Graphics" date="Nov 2023 - Dec 2023" title="Software Engineer">
+                <p>
+                    Tension made me the great programmer that i am today. From the amazing mentors i had, to the amazing projects i got to work on.
+                    They entrusting me with modernizing the rendering pipeline to Vulkan for both desktop and mobile.
+                    To co-running a test project in Godot as a consultant. I entered as a fresh student, but left as a programmer that was hungry to improve and learn even more.
+                </p>
+            </Job>
+            <Job company="GVT Intermodal" date="Oct 2019 - May 2020" title="Fullstack Developer (Internship)">
+                <p>
+                    At GVT i learned most about project management and IT support. I got to manage and learn about managing software from start to finish.
+                    While they were smaller projects they still learned me the initial steps of time management in a project,
+                    that i hadn’t gotten to experience at during school assignments.
+                </p>
+            </Job>
+            <Job company="IceHosting" date="Oct 2018 - Jan 2019" title="Back-end Developer (Internship)">
+                <p>
+                    My internship at IceHosting was quite short, but it is where i learned the most about a lot of different things.
+                    From genuine life lessons to my beginning interest in design. And a lot of learning about servers. While i have not affected IceHosting in the slightest,
+                    my time there has shown that everyone has a lesson you can learn from. Be that in your career or your life.
+                </p>
+            </Job>
+        </div>
+    </div>
+</section>

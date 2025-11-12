@@ -1,0 +1,28 @@
+---
+const { company, title, date } = Astro.props;
+---
+
+<style>
+    .job {
+        margin-bottom: 50px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .title {
+        margin: 15px 0;
+    }
+</style>
+
+<div class="job">
+    <div class="container">
+        <h4>{company}</h4>
+        <h5>{date}</h4>
+    </div>
+    <h5 class="title">{title}</h5>
+    <slot />
+</div>

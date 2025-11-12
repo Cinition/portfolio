@@ -19,8 +19,9 @@ const text_accent_color = "#638889";
 		margin: 0;
 	}
 
-	h1,h2,p,span {
+	h1,h2,h3,h4,h5,p,span {
 		font-family: 'Quicksand Variable', sans-serif;
+		margin: 0;
 	}
 
 	h1 {
@@ -29,6 +30,20 @@ const text_accent_color = "#638889";
 
 	h2 {
 		font-size: 27px;
+	}
+
+	h3 {
+		font-size: 20px;
+		color: var(--text_accent_color);
+	}
+
+	h4 {
+		font-size: 20px;
+	}
+
+	h5 {
+		font-size: 20px;
+		font-weight: normal;
 	}
 
 	p {
@@ -42,21 +57,14 @@ const text_accent_color = "#638889";
 		<link rel="icon" type="image/xml+svg" href="/logo.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="I have 4 years of experience with C++ and specialize in dev tools,<br>Also like to dable with rendering and embedded programming in Zig" />
 		<title>Cornee Nieuwenhuis</title>
 	</head>
 	<body>
 		<Navbar/>
-		<section id="Hero">
-			<Hero/>
-		</section>
-		<section id="About">
-			<About/>
-		</section>
-		<section id="Experience">
-			<Experience/>
-		</section>
-		<section id="Projects">
-			<Projects/>
-		</section>
+		<Hero/>
+		<About/>
+		<Experience/>
+		<Projects/>
 	</body>
 </html>
