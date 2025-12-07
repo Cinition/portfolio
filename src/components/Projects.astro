@@ -1,11 +1,92 @@
 ---
+import imgizmoVid from "../assets/imgizmo.mp4"
+import imgizmoImg from "../assets/ImGizmo.png"
+import headshot from "../assets/me.png"
+import unitysoundmachine from "../assets/UnitySoundMachine.png"
+import hextiling from "../assets/HexTiling.png"
+import coalclicker from "../assets/CoalClicker.png"
 
+import Job from "./Job.astro";
+import Project from "./Project.astro"
 ---
 
 <style>
+    section {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 150px;
+    }
 
+    .container {
+        width: 800px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .right {
+        width: 600px;
+    }
+
+    .sticky {
+        position: sticky;
+        top:200px;
+    }
 </style>
 
-<div>
-    
-</div>
+<section>
+    <div class="container">
+        <h3 class="sticky">
+            Projects
+        </h3>
+        <div class="right">
+            <Project name="ImGizmo" video={imgizmoVid} image={imgizmoImg.src} github="https://www.github.com/Cinition/ImGizmo">
+                <p>
+                    ImGizmo is my current main side project, which is a Dear ImGui extension library focusing on giving the user the functionality of having 3D Gizmos
+                    inside of their ImGui context. With focus on ease of use and having useful standards it should strive to be the best plug and play Gizmo library for ImGui users.
+                    <br><br>
+                    ImGizmo strives for great UX and bases most of its functionality and usability on the great work by Robin-Yann Storm.
+                    <br><br>
+                    <i>(Currently being rewritten, due to scope creep)</i>
+                </p>
+            </Project>
+            <Project name="Unity Sound Machine" image={unitysoundmachine.src}>
+                <p>
+                    During a PSQ game project i got the task of making a tool for music and sound effects. I instantly got ideas of how to implement a
+                    system that both the designers and programmers would enjoy to work with and not bother with any settings of the Unity audio system.
+                    <br><br>
+                    With the use of a custom GUI in Unity and lots of time i managed to create a good system that the designers can easily add music,
+                    sound effects and ambient sounds. Than the programmer can implement sound effects easily with 2 Methods based on if they want it 3D positioned or 2D static.
+                    The music ambient sound are both handle by themself internaly with several options the designer can choose from,
+                    from randomized clips to looping clips or even cutting them at a certain second.
+                    In my opinion and from my fellow Desiners and Programmers this tool was a succes.
+                </p>
+            </Project>
+            <Project name="HexTiling" image={hextiling.src} github="https://www.github.com/Cinition/HexTiling">
+                <p>
+                    HexTiling is a compute algorithm that can create an effect that makes tiled textures look non tiling.
+                    It uses hexagons for its base and uses its edges to then smoothly transitions between other hexagons to create the effect.
+                    <br><br>
+                    The reason for this project was mainly to showcase to myself that i still understand shaders from my time at PSQ, it also helped that i found an interesting paper.
+                    I chose Godot for this project mainly due to comfort with the engine, and it not being the example project they provide in the paper.
+                    <br><br>
+                    <a href="https://jcgt.org/published/0011/03/05/paper.pdf" target="_blank">The Paper in question</a>
+                </p>
+            </Project>
+            <Project name="Coal Clicker (DevCove GameJam)" image={coalclicker.src} github="https://github.com/Cinition/DevCove-12-2024">
+                <p>
+                    This small clicker game was made for the DevCove GameJam hosted by a friend. While the game itself isn't much to scoff at,
+                    it is the way that i made the game that makes me proud of it. As i wanted to look at alternatives to the larger Game Engines.
+                    So i looked at Raylib and decided to learn Zig aswell<i>(because why not)</i>. But it turned out quiet well as it runs, learned alot and had fun.
+                    <br><br>
+                    This type of game development<i>(using a framework)</i> is now the basis for how i will go further with making personal game projects.
+                    I felt more enjoyment and learned more generic paradigms going this route, and am looking forward to what i can create next. Especially because i know i can do better.
+                </p>
+            </Project>
+            
+        </div>
+    </div>
+</section>
